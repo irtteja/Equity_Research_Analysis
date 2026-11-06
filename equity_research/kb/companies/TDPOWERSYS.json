@@ -5,13 +5,13 @@
   "industry": "Capital Goods \u2014 Electrical Equipment",
   "isin": "",
   "thesis": {
-    "bull_case": "TD Power Systems occupies a high-barrier niche in large custom AC/DC generators for captive power, gas turbines, hydro, and industrial motors \u2014 segments with scarce domestic competition \u2014 and stands to benefit directly from India's accelerating power-sector capex cycle (thermal, hydro, industrial). The debt-free balance sheet, a face-value stock split in Aug 2026, and four consecutive dividend payments (interim + final) signal confident management and strong internal cash generation. Export diversification to Europe and Asia provides a natural hedge against domestic capex cycles.",
-    "bear_case": "Revenue is inherently lumpy because contracts are large, project-based, and have long manufacturing cycles, making short-term earnings volatile and difficult to predict. Global majors \u2014 ABB (Brush), Siemens Energy, Marelli \u2014 with larger R&D budgets and global manufacturing networks can undercut on price or win marquee projects, limiting pricing power. A slowdown in thermal or industrial capex (policy reversal, project cancellations) would sharply compress the order book with no quick offset.",
-    "moat": "Narrow but durable moat built on proprietary engineering design capability for large custom electrical machines, high switching costs for OEM customers who qualify and validate suppliers over multi-year programmes, and limited domestic competition in the >1 MVA custom generator segment.",
+    "bull_case": "TD Power Systems is executing strongly on its niche thesis \u2014 LTM revenue has reached \u20b92,124 Cr with PAT margins stable at 12\u201314% and near-perfect (97%) CFO-to-PAT conversion confirming high earnings quality and no working-capital stress. The debt-free balance sheet, escalating dividend payouts (\u20b90.60 \u2192 \u20b91.10 per share across four consecutive payments), and a face-value split collectively signal management's confidence in a durable earnings re-rating. With India's power-sector capex cycle visibly driving revenue acceleration from \u20b9452 Cr to \u20b9640 Cr over four quarters, the company's high-switching-cost niche in custom large electrical machines remains a potent structural tailwind.",
+    "bear_case": "At PE 38x on LTM earnings of \u20b9275 Cr, the stock leaves no room for execution misses \u2014 a single quarter of order-book lumpiness or margin compression from copper/CRGO steel cost spikes on fixed-price contracts could trigger a sharp de-rating. The company's customer-concentration and dependence on domestic thermal and industrial capex means any policy reversal (accelerated renewables push crowding out thermal capex, project financing stress) would directly shrink the addressable order pipeline with no quick offset. Global OEMs (ABB Brush, Siemens Energy) with deeper R&D and balance sheets can selectively compete for marquee projects, capping long-run pricing power.",
+    "moat": "Narrow but durable moat rooted in proprietary engineering design for large custom AC/DC electrical machines (>1 MVA), multi-year OEM supplier qualification cycles that create high switching costs, and a near-absence of domestic competitors in this sub-segment.",
     "key_risks": [
-      "Project-based revenue lumpiness creates quarter-to-quarter earnings volatility and complicates valuation",
-      "Raw-material inflation (copper, CRGO steel) on fixed-price contracts can materially compress margins if unhedged",
-      "Customer and sector concentration: a pause in thermal or industrial capex \u2014 driven by policy shifts, grid over-capacity, or financing stress \u2014 directly dents order inflows"
+      "Revenue and earnings lumpiness from large project-based contracts: a single order deferral can swing quarterly PAT by 20\u201330%, complicating re-rating at a 38x PE",
+      "Raw-material cost inflation (copper, CRGO steel) on fixed-price or semi-fixed contracts \u2014 unhedged exposure can compress margins sharply given ~12\u201314% net margin buffer",
+      "Concentration risk: a sustained slowdown in thermal-power or industrial capex (policy shifts to renewables, grid overcapacity, project-financing stress) would directly dent order inflows with no rapid product-mix alternative"
     ],
     "investment_horizon": "12M",
     "last_reviewed": "2026-11-06"
@@ -77,6 +77,86 @@
       "impact": -0.1,
       "created_at": "2026-11-06T09:41:14.522952",
       "last_referenced": "2026-11-06T09:41:14.522953",
+      "reference_count": 0,
+      "contradicted_by": null
+    },
+    {
+      "id": "1675851d",
+      "text": "Q1 FY27 (Jun-2026) revenue of \u20b9640 Cr is the highest quarterly print in the dataset \u2014 up ~42% vs Q2 FY26 (\u20b9452.5 Cr) and ~9% sequentially vs Q4 FY26 \u2014 confirming sustained revenue acceleration rather than a one-quarter spike.",
+      "source": "financial data",
+      "date": "2026-11-06",
+      "tags": [
+        "revenue",
+        "growth",
+        "momentum"
+      ],
+      "impact": 0.8,
+      "created_at": "2026-11-06T09:49:35.785888",
+      "last_referenced": "2026-11-06T09:49:35.785891",
+      "reference_count": 0,
+      "contradicted_by": null
+    },
+    {
+      "id": "5605a038",
+      "text": "Q1 FY27 CFO of \u20b984.0 Cr against PAT of \u20b986.3 Cr yields a 97% cash-conversion ratio, confirming that the revenue ramp is not creating working-capital stress or receivables build-up \u2014 earnings quality is high.",
+      "source": "financial data",
+      "date": "2026-11-06",
+      "tags": [
+        "earnings_quality",
+        "cfo",
+        "working_capital"
+      ],
+      "impact": 0.78,
+      "created_at": "2026-11-06T09:49:35.785908",
+      "last_referenced": "2026-11-06T09:49:35.785909",
+      "reference_count": 0,
+      "contradicted_by": null
+    },
+    {
+      "id": "54542e2c",
+      "text": "PAT margin has been stable in a narrow 12.3%\u201313.5% band across all four quarters despite significant revenue growth, indicating both operating leverage and cost discipline \u2014 no sign of competitive price pressure compressing economics.",
+      "source": "financial data",
+      "date": "2026-11-06",
+      "tags": [
+        "margins",
+        "competitive_dynamics",
+        "cost_control"
+      ],
+      "impact": 0.72,
+      "created_at": "2026-11-06T09:49:35.785919",
+      "last_referenced": "2026-11-06T09:49:35.785920",
+      "reference_count": 0,
+      "contradicted_by": null
+    },
+    {
+      "id": "c64e5722",
+      "text": "3-year cumulative PAT growth of ~61.6% (~17.4% CAGR) is solid but the most recent quarterly cadence (PAT: \u20b956 Cr \u2192 \u20b960 Cr \u2192 \u20b972 Cr \u2192 \u20b986 Cr) suggests the growth rate is re-accelerating, implying the 3Y CAGR underrepresents forward earnings momentum.",
+      "source": "financial data",
+      "date": "2026-11-06",
+      "tags": [
+        "pat_growth",
+        "earnings_acceleration",
+        "forward_momentum"
+      ],
+      "impact": 0.68,
+      "created_at": "2026-11-06T09:49:35.785928",
+      "last_referenced": "2026-11-06T09:49:35.785929",
+      "reference_count": 0,
+      "contradicted_by": null
+    },
+    {
+      "id": "44e0de0c",
+      "text": "Face-value split from \u20b92 to \u20b91 effective 24-Aug-2026, combined with four consecutive escalating dividends (\u20b90.60 \u2192 \u20b90.65 \u2192 \u20b91.00 \u2192 \u20b91.10 per share pre-split adjusted), collectively signal management's conviction in sustained free-cash-flow generation and desire to broaden the retail investor base.",
+      "source": "corporate actions",
+      "date": "2026-11-06",
+      "tags": [
+        "corporate_action",
+        "capital_allocation",
+        "management_confidence"
+      ],
+      "impact": 0.6,
+      "created_at": "2026-11-06T09:49:35.785936",
+      "last_referenced": "2026-11-06T09:49:35.785937",
       "reference_count": 0,
       "contradicted_by": null
     }
@@ -291,6 +371,117 @@
       "outcome_signal": null,
       "prediction_error": null,
       "factor_attributions": {}
+    },
+    {
+      "id": "e1262721",
+      "made_at": "2026-11-06T09:49:35.787587",
+      "horizon": "6M",
+      "thesis": "TDPOWERSYS bull case firmly intact \u2014 revenue re-accelerating to \u20b9640 Cr with stable 13.5% PAT margins and 97% cash conversion; debt-free, dividend-escalating management signals confidence, but a 38x PE demands order-book visibility confirmation before adding exposure.",
+      "signal": "BUY",
+      "confidence": 0.478,
+      "score_snapshot": {
+        "composite_score": 0.6733,
+        "signal": "BUY",
+        "confidence": 0.478,
+        "components": {
+          "earnings_quality": {
+            "score": 0.8413,
+            "sub_scores": {
+              "cfo_pat": 0.6867,
+              "receivables_trend": 0.9,
+              "inventory_trend": 0.85,
+              "pat_consistency": 0.9566,
+              "revenue_growth": 1.0
+            },
+            "reasoning": "CFO/PAT=0.69, receivables=0.90, growth=1.00",
+            "data_quality": 0.3,
+            "flags": []
+          },
+          "management_quality": {
+            "score": 0.6925,
+            "sub_scores": {
+              "promoter_holding": 0.6,
+              "promoter_pledge": 1.0,
+              "roce_trend": 0.6,
+              "mgmt_tone": 0.75,
+              "guidance_accuracy": 0.6,
+              "capital_allocation": 0.5
+            },
+            "reasoning": "promoter=n/a, pledge=0%, roce=0.60",
+            "data_quality": 0.5,
+            "flags": []
+          },
+          "valuation": {
+            "score": 0.55,
+            "sub_scores": {
+              "pe_vs_sector": 0.0,
+              "peg": 0.8,
+              "pb_justified": 0.5,
+              "balance_sheet": 1.0,
+              "ev_ebitda": 0.5
+            },
+            "reasoning": "PE=38.0, PB=n/a, D/E=0.00, 3y-growth=62% [expensive_pe]",
+            "data_quality": 0.75,
+            "flags": [
+              "expensive_pe"
+            ]
+          },
+          "momentum": {
+            "score": 0.23,
+            "sub_scores": {
+              "ret_3m": 0.15,
+              "ret_6m": 0.1,
+              "range_position": 0.25,
+              "volume_trend": 0.65
+            },
+            "reasoning": "3M-ret-score=0.15, range=0.25 [3m_sharp_decline, 6m_sharp_decline]",
+            "data_quality": 1.0,
+            "flags": [
+              "3m_sharp_decline",
+              "6m_sharp_decline",
+              "near_52w_low"
+            ]
+          },
+          "thesis_alignment": {
+            "score": 0.765,
+            "sub_scores": {
+              "bull_case": 0.82,
+              "bear_case_clear": 0.88,
+              "guidance_momentum": 0.72,
+              "catalyst_progress": 0.76,
+              "questions_resolved": 0.0
+            },
+            "reasoning": "bull=0.82, bear_clear=0.88, guidance=0.72 [guidance_upgrade]",
+            "data_quality": 1.0,
+            "flags": [
+              "guidance_upgrade"
+            ]
+          }
+        },
+        "weights": {
+          "earnings_quality": 0.3,
+          "management_quality": 0.25,
+          "valuation": 0.2,
+          "momentum": 0.1,
+          "thesis_alignment": 0.15
+        },
+        "flags": [
+          "near_52w_low",
+          "expensive_pe",
+          "guidance_upgrade",
+          "6m_sharp_decline",
+          "3m_sharp_decline"
+        ],
+        "scored_at": "2026-11-06T09:49:35.785688",
+        "reasoning": "earnings_quality=0.84(w=0.30): CFO/PAT=0.69, receivables=0.90, growth=1.00 | management_quality=0.69(w=0.25): promoter=n/a, pledge=0%, roce=0.60 | valuation=0.55(w=0.20): PE=38.0, PB=n/a, D/E=0.00, 3y-growth=62% [expensive_pe] | momentum=0.23(w=0.10): 3M-ret-score=0.15, range=0.25 [3m_sharp_decline, 6m_sharp_decline] | thesis_alignment=0.76(w=0.15): bull=0.82, bear_clear=0.88, guidance=0.72 [guidance_upgrade]"
+      },
+      "price_at_prediction": 669.2,
+      "target_price": null,
+      "outcome_date": null,
+      "outcome_price": null,
+      "outcome_signal": null,
+      "prediction_error": null,
+      "factor_attributions": {}
     }
   ],
   "entities": [],
@@ -350,33 +541,73 @@
       "raised_at": "2026-11-06",
       "resolved_at": null,
       "answer": null
+    },
+    {
+      "id": "6a89be38",
+      "question": "What is the current order book size and L1 pipeline as of Q1 FY27, and what is the implied revenue visibility for FY27\u2013FY28 \u2014 this is the single most important variable for justifying a 38x PE?",
+      "priority": "medium",
+      "raised_at": "2026-11-06",
+      "resolved_at": null,
+      "answer": null
+    },
+    {
+      "id": "83571e1b",
+      "question": "What is the export revenue contribution and geographic mix trend \u2014 given the thesis of Europe/Asia diversification, how much of the \u20b9640 Cr Q1 FY27 revenue came from exports and is this share growing?",
+      "priority": "medium",
+      "raised_at": "2026-11-06",
+      "resolved_at": null,
+      "answer": null
+    },
+    {
+      "id": "e009f7aa",
+      "question": "How are raw-material costs (copper, CRGO steel) trending in H1 FY27, and what percentage of the order book is on fixed-price versus cost-escalation contracts \u2014 critical for margin sustainability?",
+      "priority": "medium",
+      "raised_at": "2026-11-06",
+      "resolved_at": null,
+      "answer": null
+    },
+    {
+      "id": "d28873f5",
+      "question": "Is capacity utilization approaching a ceiling that would require capex, and if so, what is management's expansion plan and timeline \u2014 a large capex cycle could temporarily impair the debt-free balance sheet?",
+      "priority": "medium",
+      "raised_at": "2026-11-06",
+      "resolved_at": null,
+      "answer": null
+    },
+    {
+      "id": "a7c02316",
+      "question": "What is the precise promoter holding percentage and whether any pledge exists \u2014 this data was listed as 'None' in the valuation feed and needs exchange-filing verification?",
+      "priority": "medium",
+      "raised_at": "2026-11-06",
+      "resolved_at": null,
+      "answer": null
     }
   ],
   "latest_scores": {
-    "composite_score": 0.5726,
-    "signal": "HOLD",
-    "confidence": 0.3493,
+    "composite_score": 0.6733,
+    "signal": "BUY",
+    "confidence": 0.478,
     "components": {
       "earnings_quality": {
-        "score": 0.5425,
+        "score": 0.8413,
         "sub_scores": {
-          "cfo_pat": 0.5,
-          "receivables_trend": 0.6,
-          "inventory_trend": 0.65,
-          "pat_consistency": 0.5,
-          "revenue_growth": 0.5
+          "cfo_pat": 0.6867,
+          "receivables_trend": 0.9,
+          "inventory_trend": 0.85,
+          "pat_consistency": 0.9566,
+          "revenue_growth": 1.0
         },
-        "reasoning": "CFO/PAT=0.50, receivables=0.60, growth=0.50",
+        "reasoning": "CFO/PAT=0.69, receivables=0.90, growth=1.00",
         "data_quality": 0.3,
         "flags": []
       },
       "management_quality": {
-        "score": 0.682,
+        "score": 0.6925,
         "sub_scores": {
           "promoter_holding": 0.6,
           "promoter_pledge": 1.0,
           "roce_trend": 0.6,
-          "mgmt_tone": 0.68,
+          "mgmt_tone": 0.75,
           "guidance_accuracy": 0.6,
           "capital_allocation": 0.5
         },
@@ -385,17 +616,19 @@
         "flags": []
       },
       "valuation": {
-        "score": 0.6,
+        "score": 0.55,
         "sub_scores": {
-          "pe_vs_sector": 0.5,
-          "peg": 0.5,
+          "pe_vs_sector": 0.0,
+          "peg": 0.8,
           "pb_justified": 0.5,
           "balance_sheet": 1.0,
           "ev_ebitda": 0.5
         },
-        "reasoning": "PE=n/a, PB=n/a, D/E=0.00",
-        "data_quality": 0.25,
-        "flags": []
+        "reasoning": "PE=38.0, PB=n/a, D/E=0.00, 3y-growth=62% [expensive_pe]",
+        "data_quality": 0.75,
+        "flags": [
+          "expensive_pe"
+        ]
       },
       "momentum": {
         "score": 0.23,
@@ -414,17 +647,19 @@
         ]
       },
       "thesis_alignment": {
-        "score": 0.6425,
+        "score": 0.765,
         "sub_scores": {
-          "bull_case": 0.62,
-          "bear_case_clear": 0.85,
-          "guidance_momentum": 0.6,
-          "catalyst_progress": 0.62,
+          "bull_case": 0.82,
+          "bear_case_clear": 0.88,
+          "guidance_momentum": 0.72,
+          "catalyst_progress": 0.76,
           "questions_resolved": 0.0
         },
-        "reasoning": "bull=0.62, bear_clear=0.85, guidance=0.60",
+        "reasoning": "bull=0.82, bear_clear=0.88, guidance=0.72 [guidance_upgrade]",
         "data_quality": 1.0,
-        "flags": []
+        "flags": [
+          "guidance_upgrade"
+        ]
       }
     },
     "weights": {
@@ -435,24 +670,26 @@
       "thesis_alignment": 0.15
     },
     "flags": [
+      "near_52w_low",
+      "expensive_pe",
+      "guidance_upgrade",
       "6m_sharp_decline",
-      "3m_sharp_decline",
-      "near_52w_low"
+      "3m_sharp_decline"
     ],
-    "scored_at": "2026-11-06T09:41:14.522793",
-    "reasoning": "earnings_quality=0.54(w=0.30): CFO/PAT=0.50, receivables=0.60, growth=0.50 | management_quality=0.68(w=0.25): promoter=n/a, pledge=0%, roce=0.60 | valuation=0.60(w=0.20): PE=n/a, PB=n/a, D/E=0.00 | momentum=0.23(w=0.10): 3M-ret-score=0.15, range=0.25 [3m_sharp_decline, 6m_sharp_decline] | thesis_alignment=0.64(w=0.15): bull=0.62, bear_clear=0.85, guidance=0.60"
+    "scored_at": "2026-11-06T09:49:35.785688",
+    "reasoning": "earnings_quality=0.84(w=0.30): CFO/PAT=0.69, receivables=0.90, growth=1.00 | management_quality=0.69(w=0.25): promoter=n/a, pledge=0%, roce=0.60 | valuation=0.55(w=0.20): PE=38.0, PB=n/a, D/E=0.00, 3y-growth=62% [expensive_pe] | momentum=0.23(w=0.10): 3M-ret-score=0.15, range=0.25 [3m_sharp_decline, 6m_sharp_decline] | thesis_alignment=0.76(w=0.15): bull=0.82, bear_clear=0.88, guidance=0.72 [guidance_upgrade]"
   },
-  "latest_signal": "HOLD",
-  "latest_confidence": 0.3493,
-  "latest_scored_at": "2026-11-06T09:41:14.522793",
+  "latest_signal": "BUY",
+  "latest_confidence": 0.478,
+  "latest_scored_at": "2026-11-06T09:49:35.785688",
   "created_at": "2026-11-06T09:36:25.897805",
-  "last_updated": "2026-11-06T09:41:14.524297",
+  "last_updated": "2026-11-06T09:49:35.787599",
   "version": 1,
   "financial_snapshot": {
-    "fetched_at": "2026-11-06T09:41:14.523145",
+    "fetched_at": "2026-11-06T09:49:35.786145",
     "quarters": 4,
     "price": 669.2,
-    "pe_ratio": null,
+    "pe_ratio": 38.0,
     "promoter_holding": null,
     "debt_equity": 0.0
   }

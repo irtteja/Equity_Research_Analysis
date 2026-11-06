@@ -64,7 +64,10 @@ class DataFetcher:
             if not detail:
                 detail = self._nse.financial_results_detail(sym, consolidated=False)
             result["raw"]["financial_detail"] = detail
-            result["financials"] = self._parse_financials(detail, periods)
+            # Fetch annual XBRL for balance sheet + cash flow (not in quarterly XBRL)
+            annual_bs_cf = self._fetch_annual_bs_cf(sym)
+            result["raw"]["annual_bs_cf"] = annual_bs_cf
+            result["financials"] = self._parse_financials(detail, periods, annual_bs_cf)
         except Exception as e:
             result["fetch_errors"].append(f"financial_results_detail: {e}")
 
@@ -118,43 +121,141 @@ class DataFetcher:
     # Parsers
     # -----------------------------------------------------------------------
 
-    def _parse_financials(self, detail: list, periods: int) -> list:
+    def _fetch_annual_bs_cf(self, sym: str) -> dict:
+        """
+        Fetch the most recent annual XBRL filing and extract balance sheet + cash flow.
+        Annual XBRL (Q4 year-end) has the full balance sheet and full-year cash flows
+        that are absent from quarterly integrated-filing XBRL.
+        """
+        try:
+            import sys, os
+            nselib_path = os.path.expanduser("~/NSELIB")
+            if nselib_path not in sys.path:
+                sys.path.insert(0, nselib_path)
+            from nselib.modules.corporate import _parse_xbrl
+
+            annual_filings = self._nse.financial_results(sym, period="Annual")
+            if not annual_filings:
+                return {}
+
+            # Try the first two (consolidated then standalone both filed)
+            for filing in annual_filings[:4]:
+                xbrl_url = filing.get("xbrl", "")
+                if not xbrl_url or xbrl_url.endswith("-"):
+                    continue
+                try:
+                    r = self._nse._session._s.get(xbrl_url, timeout=15)
+                    r.raise_for_status()
+                    xbrl = _parse_xbrl(r.content)
+
+                    # Balance sheet
+                    borrowings_current = xbrl.get("BorrowingsCurrent") or 0
+                    borrowings_noncurrent = xbrl.get("BorrowingsNoncurrent") or 0
+                    total_borrowings = (borrowings_current or 0) + (borrowings_noncurrent or 0)
+                    equity = xbrl.get("Equity") or xbrl.get("TotalEquity") or None
+
+                    bs = {
+                        "total_assets":       xbrl.get("Assets"),
+                        "current_assets":     xbrl.get("CurrentAssets"),
+                        "noncurrent_assets":  xbrl.get("NoncurrentAssets"),
+                        "cash":               xbrl.get("CashAndCashEquivalents"),
+                        "trade_receivables":  xbrl.get("TradeReceivablesCurrent"),
+                        "inventories":        xbrl.get("Inventories"),
+                        "ppe":                xbrl.get("PropertyPlantAndEquipment"),
+                        "equity":             equity,
+                        "equity_share_capital": xbrl.get("EquityShareCapital"),
+                        "borrowings_current": borrowings_current,
+                        "borrowings_noncurrent": borrowings_noncurrent,
+                        "total_borrowings":   total_borrowings,
+                        "trade_payables":     xbrl.get("TradePayablesCurrent"),
+                    }
+
+                    # Cash flow (year-to-date cumulative in Q4 = full year)
+                    cf = {
+                        "cfo":      xbrl.get("CashFlowsFromUsedInOperatingActivities"),
+                        "cfi":      xbrl.get("CashFlowsFromUsedInInvestingActivities"),
+                        "cff":      xbrl.get("CashFlowsFromUsedInFinancingActivities"),
+                        "capex":    xbrl.get("PurchaseOfPropertyPlantAndEquipment"),
+                        "dividends_paid": xbrl.get("DividendsPaid"),
+                    }
+
+                    # Only return if we got meaningful data
+                    if bs.get("total_assets") or cf.get("cfo"):
+                        return {
+                            "period_end": xbrl.get("DateOfEndOfReportingPeriod", filing.get("toDate")),
+                            "balance_sheet": bs,
+                            "cash_flow": cf,
+                            "debt_equity": total_borrowings / equity if equity and equity > 0 else 0.0,
+                            "revenue_annual": xbrl.get("RevenueFromOperations"),
+                            "pat_annual": xbrl.get("ProfitLossForPeriod"),
+                        }
+                except Exception:
+                    continue
+        except Exception:
+            pass
+        return {}
+
+    def _parse_financials(self, detail: list, periods: int, annual_bs_cf: dict = None) -> list:
         """
         Normalize XBRL financial detail into scorer-ready format.
+
+        P&L fields are FLAT on the top-level dict in financial_results_detail output
+        (not nested under 'profit_loss'). Balance sheet and cash flow are always None
+        in quarterly XBRL — they come from the separate annual_bs_cf fetch.
+
         Each item: {period, revenue, pat, ebitda, cfo, receivables, inventory,
                     capex, roce, eps, debt_equity}
         """
-        parsed = []
-        for q in (detail or [])[:periods]:
-            pl = q.get("profit_loss", {})
-            bs = q.get("balance_sheet", {})
-            cf = q.get("cash_flow", {})
-            meta = q.get("meta", {})
+        annual_bs = (annual_bs_cf or {}).get("balance_sheet", {})
+        annual_cf = (annual_bs_cf or {}).get("cash_flow", {})
+        annual_de = (annual_bs_cf or {}).get("debt_equity")
 
-            revenue = pl.get("revenue_from_operations") or pl.get("total_income") or 0
-            pat = pl.get("pat") or pl.get("profit_after_tax") or 0
-            ebitda = pl.get("ebitda") or 0
-            cfo = cf.get("operating_activities") or cf.get("cfo") or None
-            capex = cf.get("capex") or cf.get("purchase_of_fixed_assets") or None
-            receivables = bs.get("trade_receivables") or bs.get("receivables") or None
-            inventory = bs.get("inventories") or bs.get("inventory") or None
-            total_debt = (bs.get("borrowings") or bs.get("total_borrowings") or 0)
-            equity = (bs.get("equity") or bs.get("shareholders_equity") or 1)
-            debt_equity = total_debt / equity if equity else None
+        parsed = []
+        for i, q in enumerate((detail or [])[:periods]):
+            # P&L fields are flat on q (not nested under 'profit_loss')
+            revenue = q.get("revenue_from_operations") or q.get("total_income") or 0
+            pat     = q.get("pat") or 0
+            ebit    = q.get("ebit") or 0
+            pbt     = q.get("pbt") or 0
+            # EBITDA = EBIT + depreciation
+            ebitda  = ebit + (q.get("depreciation") or 0) if ebit else 0
+
+            # Balance sheet: not in quarterly XBRL — use annual for most recent quarter
+            # For older quarters, carry forward annual values (best available)
+            receivables = annual_bs.get("trade_receivables")
+            inventory   = annual_bs.get("inventories")
+            equity      = annual_bs.get("equity")
+            total_borrowings = annual_bs.get("total_borrowings", 0) or 0
+            debt_equity = annual_de if annual_de is not None else (
+                total_borrowings / equity if equity and equity > 0 else None
+            )
+
+            # Cash flow: annual filing gives full-year OCF — attach to most recent quarter only
+            cfo   = annual_cf.get("cfo") if i == 0 else None
+            capex = annual_cf.get("capex") if i == 0 else None
 
             parsed.append({
-                "period": q.get("period", meta.get("period_end", "")),
-                "revenue": revenue,
-                "pat": pat,
-                "ebitda": ebitda,
-                "cfo": cfo,
-                "capex": capex,
-                "receivables": receivables,
-                "inventory": inventory,
-                "debt_equity": debt_equity,
-                "eps": pl.get("eps_basic") or pl.get("eps") or None,
-                "roce": q.get("roce") or None,
+                "period":       q.get("period_end") or q.get("period") or "",
+                "revenue":      revenue,
+                "pat":          pat,
+                "ebitda":       ebitda,
+                "cfo":          cfo,
+                "capex":        capex,
+                "receivables":  receivables,
+                "inventory":    inventory,
+                "debt_equity":  debt_equity,
+                "eps":          q.get("eps_basic") or q.get("eps_diluted") or None,
+                "roce":         None,  # not in XBRL, computed below if data allows
             })
+
+        # Compute trailing 12M (TTM) ROCE for the latest quarter if we have enough data
+        if parsed and equity and equity > 0:
+            ttm_ebit = sum(q.get("ebitda", 0) or 0 for q in parsed[:4])
+            # Rough capital employed = equity + total_borrowings
+            cap_employed = equity + total_borrowings
+            if cap_employed > 0 and ttm_ebit > 0:
+                parsed[0]["roce"] = round(ttm_ebit / cap_employed, 4)
+
         return parsed
 
     def _parse_price_history(self, hist: list) -> list:
@@ -210,19 +311,42 @@ class DataFetcher:
                 val["week52_low"] = min(closes)
                 val["price"] = val["price"] or closes[0]
 
-        # P/E, P/B from meta (live API if accessible)
+        # P/E from meta (live API if accessible), fallback to computed TTM PE
         val["pe_ratio"] = meta.get("pdSymbolPe") or meta.get("priceEarningRatio")
         val["pb_ratio"] = meta.get("pbRatio") or meta.get("priceToBook")
 
-        # Debt/equity from latest financials
+        # Debt/equity and computed valuations from financials
         if fins:
             val["debt_equity"] = fins[0].get("debt_equity")
-            # 3-year PAT growth
+
+            # TTM (trailing 12M) PAT = sum of last 4 quarters
+            ttm_pat = sum(q.get("pat", 0) or 0 for q in fins[:4])
+
+            # TTM EPS = sum of quarterly EPS
+            eps_values = [q.get("eps") for q in fins[:4] if q.get("eps") is not None]
+            ttm_eps = sum(eps_values) if eps_values else None
+
+            # Compute PE from price / TTM EPS if live PE not available
+            price = val.get("price")
+            if not val["pe_ratio"] and price and ttm_eps and ttm_eps > 0:
+                val["pe_ratio"] = round(price / ttm_eps, 1)
+                val["pe_ratio_source"] = "computed_ttm"
+
+            # PAT growth: compare most recent quarter vs same quarter a year ago (Q5)
+            if len(fins) >= 5:
+                pat_now = fins[0].get("pat", 0) or 0
+                pat_year_ago = fins[4].get("pat", 0) or 1
+                if pat_year_ago > 0 and pat_now > 0:
+                    val["pat_growth_yoy"] = (pat_now - pat_year_ago) / pat_year_ago
+            # 3-year approximation from 4 quarters of data
             if len(fins) >= 4:
                 pat_now = fins[0].get("pat", 0) or 0
                 pat_then = fins[3].get("pat", 0) or 1
                 if pat_then > 0 and pat_now > 0:
                     val["pat_growth_3y"] = (pat_now / pat_then) ** (4 / 3) - 1
+
+            val["ttm_pat"] = ttm_pat
+            val["ttm_eps"] = ttm_eps
 
         # Shareholding
         sh = result.get("shareholding", {})
