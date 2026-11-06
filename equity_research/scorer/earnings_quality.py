@@ -155,13 +155,37 @@ class EarningsQualityScorer(BaseScorer):
         else:
             sub["revenue_growth"] = 0.5
 
+        # --- 6. PAT sequential trend (QoQ direction over last 3 quarters) ---
+        # Catches businesses whose earnings are deteriorating even if absolute level looks ok.
+        pat_values = [q.get("pat", 0) or 0 for q in quarters[:4]]
+        if len(pat_values) >= 3 and all(p != 0 for p in pat_values[:3]):
+            # Count how many consecutive QoQ moves are declines
+            declines = sum(
+                1 for i in range(len(pat_values) - 1)
+                if pat_values[i] < pat_values[i + 1]  # quarters sorted newest-first → decline = newer < older
+            )
+            if declines >= 3:
+                sub["pat_trend"] = 0.2
+                flags.append("pat_declining_trend")
+            elif declines == 2:
+                sub["pat_trend"] = 0.4
+                flags.append("pat_weakening")
+            elif declines == 0:
+                sub["pat_trend"] = 1.0   # all quarters improving
+                flags.append("pat_accelerating")
+            else:
+                sub["pat_trend"] = 0.65  # mixed
+        else:
+            sub["pat_trend"] = 0.5
+
         # --- Composite ---
         weights = {
-            "cfo_pat": 0.35,
-            "receivables_trend": 0.20,
-            "inventory_trend": 0.15,
+            "cfo_pat": 0.30,
+            "receivables_trend": 0.15,
+            "inventory_trend": 0.10,
             "pat_consistency": 0.15,
             "revenue_growth": 0.15,
+            "pat_trend": 0.15,
         }
         composite = sum(sub.get(k, 0.5) * w for k, w in weights.items())
 

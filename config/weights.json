@@ -1,12 +1,13 @@
 {
-  "_version": 1,
+  "_version": 2,
   "_note": "Weights sum to 1.0. Updated via feedback loop — Claude proposes, human approves.",
+  "_change": "v2: backtest showed mgmt (live API blocked) and thesis (needs Claude run) are dead weight at 40%. Shifted to momentum (10→20) and earnings (30→35) which have real data. Valuation 20→25 to better penalise expensive PEs.",
   "weights": {
-    "earnings_quality": 0.30,
-    "management_quality": 0.25,
-    "valuation": 0.20,
-    "momentum": 0.10,
-    "thesis_alignment": 0.15
+    "earnings_quality": 0.35,
+    "management_quality": 0.15,
+    "valuation": 0.25,
+    "momentum": 0.20,
+    "thesis_alignment": 0.05
   },
   "score_thresholds": {
     "strong_buy": 0.75,
@@ -15,5 +16,18 @@
     "sell": 0.30,
     "strong_sell": 0.0
   },
-  "feedback_history": []
+  "feedback_history": [
+    {
+      "version": 2,
+      "date": "2026-11-06",
+      "trigger": "6-company backtest: all 4 data-complete companies got BUY; 3 of 4 had negative 6M returns",
+      "changes": {
+        "earnings_quality": "+0.05 (real data, QoQ trend added)",
+        "management_quality": "-0.10 (promoter holding unavailable from cloud)",
+        "valuation": "+0.05 (PE flag needs more weight)",
+        "momentum": "+0.10 (falling knife prevention)",
+        "thesis_alignment": "-0.10 (requires Claude run, defaulting to neutral)"
+      }
+    }
+  ]
 }

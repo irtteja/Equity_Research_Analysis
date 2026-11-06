@@ -2,9 +2,9 @@
   {
     "symbol": "NESTLEIND",
     "name": "Nestle India",
-    "signal": "BUY",
-    "composite": 0.642,
-    "confidence": 0.456,
+    "signal": "HOLD",
+    "composite": 0.61,
+    "confidence": 0.433,
     "price": 1258.3,
     "pe": 59.5,
     "de": 0.009320869588642549,
@@ -15,12 +15,13 @@
     "r1y_pct": -1.0,
     "flags": [
       "high_peg",
-      "3m_sharp_decline",
+      "expensive_pe",
       "volume_expansion",
-      "expensive_pe"
+      "momentum_cap_applied",
+      "3m_sharp_decline"
     ],
     "components": {
-      "earnings_quality": 0.9153,
+      "earnings_quality": 0.8828,
       "management_quality": 0.67,
       "valuation": 0.4,
       "momentum": 0.365,
@@ -38,9 +39,9 @@
   {
     "symbol": "DEEPAKNTR",
     "name": "Deepak Nitrite",
-    "signal": "BUY",
-    "composite": 0.723,
-    "confidence": 0.513,
+    "signal": "HOLD",
+    "composite": 0.724,
+    "confidence": 0.514,
     "price": 1544.0,
     "pe": 17.8,
     "de": 0.044985360836713194,
@@ -50,12 +51,14 @@
     "r6m_pct": -15.2,
     "r1y_pct": -11.9,
     "flags": [
+      "6m_sharp_decline",
       "volume_expansion",
-      "3m_sharp_decline",
-      "6m_sharp_decline"
+      "momentum_cap_applied",
+      "pat_accelerating",
+      "3m_sharp_decline"
     ],
     "components": {
-      "earnings_quality": 0.9368,
+      "earnings_quality": 0.9493,
       "management_quality": 0.67,
       "valuation": 0.797,
       "momentum": 0.32,
@@ -74,8 +77,8 @@
     "symbol": "TATAMOTORS",
     "name": "Tata Motors",
     "signal": "HOLD",
-    "composite": 0.566,
-    "confidence": 0.236,
+    "composite": 0.543,
+    "confidence": 0.226,
     "price": 405.85,
     "pe": null,
     "de": null,
@@ -85,8 +88,8 @@
     "r6m_pct": null,
     "r1y_pct": null,
     "flags": [
-      "near_52w_low",
-      "no_data"
+      "no_data",
+      "near_52w_low"
     ],
     "components": {
       "earnings_quality": 0.5,
@@ -110,8 +113,8 @@
     "symbol": "SUNPHARMA",
     "name": "Sun Pharmaceutical",
     "signal": "BUY",
-    "composite": 0.635,
-    "confidence": 0.419,
+    "composite": 0.602,
+    "confidence": 0.397,
     "price": 1829.0,
     "pe": 40.0,
     "de": 0.04240591410868511,
@@ -123,10 +126,11 @@
     "flags": [
       "3m_negative",
       "volume_expansion",
-      "expensive_pe"
+      "expensive_pe",
+      "pat_weakening"
     ],
     "components": {
-      "earnings_quality": 0.804,
+      "earnings_quality": 0.739,
       "management_quality": 0.67,
       "valuation": 0.475,
       "momentum": 0.4825,
@@ -145,8 +149,8 @@
     "symbol": "ZOMATO",
     "name": "Zomato",
     "signal": "HOLD",
-    "composite": 0.571,
-    "confidence": 0.2,
+    "composite": 0.553,
+    "confidence": 0.194,
     "price": null,
     "pe": null,
     "de": null,
@@ -156,8 +160,8 @@
     "r6m_pct": null,
     "r1y_pct": null,
     "flags": [
-      "no_price_data",
-      "no_data"
+      "no_data",
+      "no_price_data"
     ],
     "components": {
       "earnings_quality": 0.5,
@@ -180,9 +184,9 @@
   {
     "symbol": "TDPOWERSYS",
     "name": "TD Power Systems",
-    "signal": "BUY",
-    "composite": 0.636,
-    "confidence": 0.452,
+    "signal": "HOLD",
+    "composite": 0.598,
+    "confidence": 0.424,
     "price": 669.2,
     "pe": 38.0,
     "de": 0.0,
@@ -192,13 +196,13 @@
     "r6m_pct": -42.5,
     "r1y_pct": 3.2,
     "flags": [
-      "near_52w_low",
+      "6m_sharp_decline",
       "3m_sharp_decline",
-      "expensive_pe",
-      "6m_sharp_decline"
+      "near_52w_low",
+      "expensive_pe"
     ],
     "components": {
-      "earnings_quality": 0.8413,
+      "earnings_quality": 0.817,
       "management_quality": 0.67,
       "valuation": 0.55,
       "momentum": 0.23,

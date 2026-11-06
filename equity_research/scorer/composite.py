@@ -26,11 +26,11 @@ from .thesis_alignment import ThesisAlignmentScorer
 
 
 _DEFAULT_WEIGHTS = {
-    "earnings_quality": 0.30,
-    "management_quality": 0.25,
-    "valuation": 0.20,
-    "momentum": 0.10,
-    "thesis_alignment": 0.15,
+    "earnings_quality": 0.35,
+    "management_quality": 0.15,
+    "valuation": 0.25,
+    "momentum": 0.20,
+    "thesis_alignment": 0.05,
 }
 
 _THRESHOLDS = {
@@ -114,6 +114,13 @@ class CompositeScorer:
         confidence = weighted_score * avg_dq  # lower data quality = lower confidence
 
         signal = _signal_from_score(weighted_score)
+
+        # Momentum cap: a stock in a clear downtrend cannot get a BUY signal — it's a
+        # falling knife. If momentum score < 0.40, cap signal at HOLD.
+        mom_score = components["momentum"].score
+        if mom_score < 0.40 and signal in ("BUY", "STRONG_BUY"):
+            signal = "HOLD"
+            all_flags.append("momentum_cap_applied")
 
         # Composite reasoning
         lines = []
