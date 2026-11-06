@@ -1,0 +1,216 @@
+[
+  {
+    "symbol": "NESTLEIND",
+    "name": "Nestle India",
+    "signal": "BUY",
+    "composite": 0.642,
+    "confidence": 0.456,
+    "price": 1258.3,
+    "pe": 59.5,
+    "de": 0.009320869588642549,
+    "promoter": null,
+    "ttm_rev_cr": 25581.0,
+    "ttm_pat_cr": 4078.0,
+    "r6m_pct": -15.3,
+    "r1y_pct": -1.0,
+    "flags": [
+      "high_peg",
+      "3m_sharp_decline",
+      "volume_expansion",
+      "expensive_pe"
+    ],
+    "components": {
+      "earnings_quality": 0.9153,
+      "management_quality": 0.67,
+      "valuation": 0.4,
+      "momentum": 0.365,
+      "thesis_alignment": 0.555
+    },
+    "data_quality": {
+      "earnings_quality": 0.3,
+      "management_quality": 0.5,
+      "valuation": 0.75,
+      "momentum": 1.0,
+      "thesis_alignment": 1.0
+    },
+    "fetch_errors": []
+  },
+  {
+    "symbol": "DEEPAKNTR",
+    "name": "Deepak Nitrite",
+    "signal": "BUY",
+    "composite": 0.723,
+    "confidence": 0.513,
+    "price": 1544.0,
+    "pe": 17.8,
+    "de": 0.044985360836713194,
+    "promoter": null,
+    "ttm_rev_cr": 9895.0,
+    "ttm_pat_cr": 1182.0,
+    "r6m_pct": -15.2,
+    "r1y_pct": -11.9,
+    "flags": [
+      "volume_expansion",
+      "3m_sharp_decline",
+      "6m_sharp_decline"
+    ],
+    "components": {
+      "earnings_quality": 0.9368,
+      "management_quality": 0.67,
+      "valuation": 0.797,
+      "momentum": 0.32,
+      "thesis_alignment": 0.555
+    },
+    "data_quality": {
+      "earnings_quality": 0.3,
+      "management_quality": 0.5,
+      "valuation": 0.75,
+      "momentum": 1.0,
+      "thesis_alignment": 1.0
+    },
+    "fetch_errors": []
+  },
+  {
+    "symbol": "TATAMOTORS",
+    "name": "Tata Motors",
+    "signal": "HOLD",
+    "composite": 0.566,
+    "confidence": 0.236,
+    "price": 405.85,
+    "pe": null,
+    "de": null,
+    "promoter": null,
+    "ttm_rev_cr": null,
+    "ttm_pat_cr": null,
+    "r6m_pct": null,
+    "r1y_pct": null,
+    "flags": [
+      "near_52w_low",
+      "no_data"
+    ],
+    "components": {
+      "earnings_quality": 0.5,
+      "management_quality": 0.67,
+      "valuation": 0.6,
+      "momentum": 0.45,
+      "thesis_alignment": 0.555
+    },
+    "data_quality": {
+      "earnings_quality": 0.0,
+      "management_quality": 0.5,
+      "valuation": 0.25,
+      "momentum": 0.3333,
+      "thesis_alignment": 1.0
+    },
+    "fetch_errors": [
+      "equity_meta_info: 'NoneType' object has no attribute 'get'"
+    ]
+  },
+  {
+    "symbol": "SUNPHARMA",
+    "name": "Sun Pharmaceutical",
+    "signal": "BUY",
+    "composite": 0.635,
+    "confidence": 0.419,
+    "price": 1829.0,
+    "pe": 40.0,
+    "de": 0.04240591410868511,
+    "promoter": null,
+    "ttm_rev_cr": 61631.0,
+    "ttm_pat_cr": 10987.0,
+    "r6m_pct": -1.1,
+    "r1y_pct": 8.4,
+    "flags": [
+      "3m_negative",
+      "volume_expansion",
+      "expensive_pe"
+    ],
+    "components": {
+      "earnings_quality": 0.804,
+      "management_quality": 0.67,
+      "valuation": 0.475,
+      "momentum": 0.4825,
+      "thesis_alignment": 0.555
+    },
+    "data_quality": {
+      "earnings_quality": 0.3,
+      "management_quality": 0.5,
+      "valuation": 0.5,
+      "momentum": 1.0,
+      "thesis_alignment": 1.0
+    },
+    "fetch_errors": []
+  },
+  {
+    "symbol": "ZOMATO",
+    "name": "Zomato",
+    "signal": "HOLD",
+    "composite": 0.571,
+    "confidence": 0.2,
+    "price": null,
+    "pe": null,
+    "de": null,
+    "promoter": null,
+    "ttm_rev_cr": null,
+    "ttm_pat_cr": null,
+    "r6m_pct": null,
+    "r1y_pct": null,
+    "flags": [
+      "no_price_data",
+      "no_data"
+    ],
+    "components": {
+      "earnings_quality": 0.5,
+      "management_quality": 0.67,
+      "valuation": 0.6,
+      "momentum": 0.5,
+      "thesis_alignment": 0.555
+    },
+    "data_quality": {
+      "earnings_quality": 0.0,
+      "management_quality": 0.5,
+      "valuation": 0.25,
+      "momentum": 0.0,
+      "thesis_alignment": 1.0
+    },
+    "fetch_errors": [
+      "equity_meta_info: 'NoneType' object has no attribute 'get'"
+    ]
+  },
+  {
+    "symbol": "TDPOWERSYS",
+    "name": "TD Power Systems",
+    "signal": "BUY",
+    "composite": 0.636,
+    "confidence": 0.452,
+    "price": 669.2,
+    "pe": 38.0,
+    "de": 0.0,
+    "promoter": null,
+    "ttm_rev_cr": 2124.0,
+    "ttm_pat_cr": 275.0,
+    "r6m_pct": -42.5,
+    "r1y_pct": 3.2,
+    "flags": [
+      "near_52w_low",
+      "3m_sharp_decline",
+      "expensive_pe",
+      "6m_sharp_decline"
+    ],
+    "components": {
+      "earnings_quality": 0.8413,
+      "management_quality": 0.67,
+      "valuation": 0.55,
+      "momentum": 0.23,
+      "thesis_alignment": 0.555
+    },
+    "data_quality": {
+      "earnings_quality": 0.3,
+      "management_quality": 0.5,
+      "valuation": 0.75,
+      "momentum": 1.0,
+      "thesis_alignment": 1.0
+    },
+    "fetch_errors": []
+  }
+]
