@@ -1,0 +1,741 @@
+{
+  "results": [
+    {
+      "quarter": "2018-09-30",
+      "n_q_available": 1,
+      "signal": "HOLD",
+      "composite_score": 0.454,
+      "confidence": 0.3,
+      "price_at_signal": 730.05,
+      "price_next_q": 658.95,
+      "price_1y": 805.65,
+      "return_1q": -0.0974,
+      "return_1y": 0.1036,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.53,
+        "management_quality": 0.67,
+        "valuation": 0.395,
+        "momentum": 0.207,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "near_52w_low",
+        "expensive_pe",
+        "3m_sharp_decline",
+        "6m_sharp_decline"
+      ],
+      "pe_at_signal": 77.3,
+      "ttm_rev": 20609.0,
+      "ttm_pat": 4110.0,
+      "latest_eps": 9.45
+    },
+    {
+      "quarter": "2018-12-31",
+      "n_q_available": 2,
+      "signal": "HOLD",
+      "composite_score": 0.5057,
+      "confidence": 0.334,
+      "price_at_signal": 658.95,
+      "price_next_q": 743.85,
+      "price_1y": 731.15,
+      "return_1q": 0.1288,
+      "return_1y": 0.1096,
+      "correct_1q": "neutral",
+      "components": {
+        "earnings_quality": 0.625,
+        "management_quality": 0.67,
+        "valuation": 0.399,
+        "momentum": 0.295,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "3m_negative",
+        "near_52w_low",
+        "6m_sharp_decline"
+      ],
+      "pe_at_signal": 37.1,
+      "ttm_rev": 42009.0,
+      "ttm_pat": 7720.0,
+      "latest_eps": 8.3
+    },
+    {
+      "quarter": "2019-03-31",
+      "n_q_available": 3,
+      "signal": "HOLD",
+      "composite_score": 0.5844,
+      "confidence": 0.386,
+      "price_at_signal": 743.85,
+      "price_next_q": 732.0,
+      "price_1y": 641.5,
+      "return_1q": -0.0159,
+      "return_1y": -0.1376,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.615,
+        "management_quality": 0.67,
+        "valuation": 0.496,
+        "momentum": 0.585,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "near_52w_low"
+      ],
+      "pe_at_signal": 27.4,
+      "ttm_rev": 63548.0,
+      "ttm_pat": 11798.0,
+      "latest_eps": 9.37
+    },
+    {
+      "quarter": "2019-06-30",
+      "n_q_available": 4,
+      "signal": "HOLD",
+      "composite_score": 0.5752,
+      "confidence": 0.38,
+      "price_at_signal": 732.0,
+      "price_next_q": 805.65,
+      "price_1y": 735.95,
+      "return_1q": 0.1006,
+      "return_1y": 0.0054,
+      "correct_1q": "neutral",
+      "components": {
+        "earnings_quality": 0.579,
+        "management_quality": 0.67,
+        "valuation": 0.566,
+        "momentum": 0.515,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "near_52w_low",
+        "pat_weakening"
+      ],
+      "pe_at_signal": 20.4,
+      "ttm_rev": 85351.0,
+      "ttm_pat": 15600.0,
+      "latest_eps": 8.83
+    },
+    {
+      "quarter": "2019-09-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6248,
+      "confidence": 0.412,
+      "price_at_signal": 805.65,
+      "price_next_q": 731.15,
+      "price_1y": 1008.25,
+      "return_1q": -0.0925,
+      "return_1y": 0.2515,
+      "correct_1q": "wrong",
+      "components": {
+        "earnings_quality": 0.62,
+        "management_quality": 0.67,
+        "valuation": 0.546,
+        "momentum": 0.715,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 22.4,
+      "ttm_rev": 87371.0,
+      "ttm_pat": 15527.0,
+      "latest_eps": 9.46
+    },
+    {
+      "quarter": "2019-12-31",
+      "n_q_available": 4,
+      "signal": "HOLD",
+      "composite_score": 0.5758,
+      "confidence": 0.38,
+      "price_at_signal": 731.15,
+      "price_next_q": 641.5,
+      "price_1y": 1255.8,
+      "return_1q": -0.1226,
+      "return_1y": 0.7176,
+      "correct_1q": "neutral",
+      "components": {
+        "earnings_quality": 0.62,
+        "management_quality": 0.67,
+        "valuation": 0.578,
+        "momentum": 0.43,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "3m_negative"
+      ],
+      "pe_at_signal": 19.2,
+      "ttm_rev": 89063.0,
+      "ttm_pat": 16383.0,
+      "latest_eps": 10.51
+    },
+    {
+      "quarter": "2020-03-31",
+      "n_q_available": 4,
+      "signal": "HOLD",
+      "composite_score": 0.5442,
+      "confidence": 0.359,
+      "price_at_signal": 641.5,
+      "price_next_q": 735.95,
+      "price_1y": 1368.05,
+      "return_1q": 0.1472,
+      "return_1y": 1.1326,
+      "correct_1q": "neutral",
+      "components": {
+        "earnings_quality": 0.621,
+        "management_quality": 0.67,
+        "valuation": 0.605,
+        "momentum": 0.237,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "3m_sharp_decline",
+        "6m_sharp_decline"
+      ],
+      "pe_at_signal": 16.5,
+      "ttm_rev": 90791.0,
+      "ttm_pat": 16640.0,
+      "latest_eps": 10.19
+    },
+    {
+      "quarter": "2020-06-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6166,
+      "confidence": 0.407,
+      "price_at_signal": 735.95,
+      "price_next_q": 1008.25,
+      "price_1y": 1580.8,
+      "return_1q": 0.37,
+      "return_1y": 1.148,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.585,
+        "management_quality": 0.67,
+        "valuation": 0.587,
+        "momentum": 0.685,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "pat_weakening"
+      ],
+      "pe_at_signal": 18.3,
+      "ttm_rev": 92653.0,
+      "ttm_pat": 17110.0,
+      "latest_eps": 9.98
+    },
+    {
+      "quarter": "2020-09-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6464,
+      "confidence": 0.427,
+      "price_at_signal": 1008.25,
+      "price_next_q": 1255.8,
+      "price_1y": 1675.2,
+      "return_1q": 0.2455,
+      "return_1y": 0.6615,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.584,
+        "management_quality": 0.67,
+        "valuation": 0.531,
+        "momentum": 0.905,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "pat_weakening"
+      ],
+      "pe_at_signal": 23.9,
+      "ttm_rev": 94594.0,
+      "ttm_pat": 17931.0,
+      "latest_eps": 11.42
+    },
+    {
+      "quarter": "2020-12-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6604,
+      "confidence": 0.436,
+      "price_at_signal": 1255.8,
+      "price_next_q": 1368.05,
+      "price_1y": 1887.75,
+      "return_1q": 0.0894,
+      "return_1y": 0.5032,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.657,
+        "management_quality": 0.67,
+        "valuation": 0.484,
+        "momentum": 0.905,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 28.6,
+      "ttm_rev": 97429.0,
+      "ttm_pat": 18680.0,
+      "latest_eps": 12.25
+    },
+    {
+      "quarter": "2021-03-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6815,
+      "confidence": 0.45,
+      "price_at_signal": 1368.05,
+      "price_next_q": 1580.8,
+      "price_1y": 1906.85,
+      "return_1q": 0.1555,
+      "return_1y": 0.3938,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.808,
+        "management_quality": 0.67,
+        "valuation": 0.47,
+        "momentum": 0.765,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 30.0,
+      "ttm_rev": 100473.0,
+      "ttm_pat": 19423.0,
+      "latest_eps": 11.96
+    },
+    {
+      "quarter": "2021-06-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6768,
+      "confidence": 0.447,
+      "price_at_signal": 1580.8,
+      "price_next_q": 1675.2,
+      "price_1y": 1461.9,
+      "return_1q": 0.0597,
+      "return_1y": -0.0752,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.81,
+        "management_quality": 0.67,
+        "valuation": 0.44,
+        "momentum": 0.775,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 33.0,
+      "ttm_rev": 104704.0,
+      "ttm_pat": 20352.0,
+      "latest_eps": 12.24
+    },
+    {
+      "quarter": "2021-09-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6598,
+      "confidence": 0.435,
+      "price_at_signal": 1675.2,
+      "price_next_q": 1887.75,
+      "price_1y": 1413.45,
+      "return_1q": 0.1269,
+      "return_1y": -0.1562,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.809,
+        "management_quality": 0.67,
+        "valuation": 0.43,
+        "momentum": 0.705,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 34.0,
+      "ttm_rev": 109736.0,
+      "ttm_pat": 20922.0,
+      "latest_eps": 12.88
+    },
+    {
+      "quarter": "2021-12-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6984,
+      "confidence": 0.461,
+      "price_at_signal": 1887.75,
+      "price_next_q": 1906.85,
+      "price_1y": 1508.2,
+      "return_1q": 0.0101,
+      "return_1y": -0.2011,
+      "correct_1q": "neutral",
+      "components": {
+        "earnings_quality": 0.901,
+        "management_quality": 0.67,
+        "valuation": 0.399,
+        "momentum": 0.775,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "pat_accelerating"
+      ],
+      "pe_at_signal": 37.1,
+      "ttm_rev": 115676.0,
+      "ttm_pat": 21529.0,
+      "latest_eps": 13.86
+    },
+    {
+      "quarter": "2022-03-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6562,
+      "confidence": 0.433,
+      "price_at_signal": 1906.85,
+      "price_next_q": 1461.9,
+      "price_1y": 1427.95,
+      "return_1q": -0.2333,
+      "return_1y": -0.2511,
+      "correct_1q": "wrong",
+      "components": {
+        "earnings_quality": 0.849,
+        "management_quality": 0.67,
+        "valuation": 0.407,
+        "momentum": 0.645,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 36.3,
+      "ttm_rev": 121641.0,
+      "ttm_pat": 22146.0,
+      "latest_eps": 13.56
+    },
+    {
+      "quarter": "2022-06-30",
+      "n_q_available": 4,
+      "signal": "HOLD",
+      "composite_score": 0.5748,
+      "confidence": 0.379,
+      "price_at_signal": 1461.9,
+      "price_next_q": 1413.45,
+      "price_1y": 1335.5,
+      "return_1q": -0.0331,
+      "return_1y": -0.0865,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.804,
+        "management_quality": 0.67,
+        "valuation": 0.495,
+        "momentum": 0.207,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "near_52w_low",
+        "3m_sharp_decline",
+        "pat_weakening",
+        "6m_sharp_decline"
+      ],
+      "pe_at_signal": 27.5,
+      "ttm_rev": 128215.0,
+      "ttm_pat": 22307.0,
+      "latest_eps": 12.78
+    },
+    {
+      "quarter": "2022-09-30",
+      "n_q_available": 4,
+      "signal": "HOLD",
+      "composite_score": 0.6165,
+      "confidence": 0.407,
+      "price_at_signal": 1413.45,
+      "price_next_q": 1508.2,
+      "price_1y": 1435.45,
+      "return_1q": 0.067,
+      "return_1y": 0.0156,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.804,
+        "management_quality": 0.67,
+        "valuation": 0.591,
+        "momentum": 0.295,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "3m_negative",
+        "near_52w_low",
+        "momentum_cap_applied",
+        "pat_weakening",
+        "6m_sharp_decline"
+      ],
+      "pe_at_signal": 25.9,
+      "ttm_rev": 135151.0,
+      "ttm_pat": 22905.0,
+      "latest_eps": 14.35
+    },
+    {
+      "quarter": "2022-12-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6585,
+      "confidence": 0.435,
+      "price_at_signal": 1508.2,
+      "price_next_q": 1427.95,
+      "price_1y": 1542.9,
+      "return_1q": -0.0532,
+      "return_1y": 0.023,
+      "correct_1q": "wrong",
+      "components": {
+        "earnings_quality": 0.844,
+        "management_quality": 0.67,
+        "valuation": 0.503,
+        "momentum": 0.545,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 26.7,
+      "ttm_rev": 141602.0,
+      "ttm_pat": 23669.0,
+      "latest_eps": 15.72
+    },
+    {
+      "quarter": "2023-03-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6701,
+      "confidence": 0.442,
+      "price_at_signal": 1427.95,
+      "price_next_q": 1335.5,
+      "price_1y": 1498.05,
+      "return_1q": -0.0647,
+      "return_1y": 0.0491,
+      "correct_1q": "wrong",
+      "components": {
+        "earnings_quality": 0.864,
+        "management_quality": 0.67,
+        "valuation": 0.602,
+        "momentum": 0.445,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "3m_negative",
+        "near_52w_low"
+      ],
+      "pe_at_signal": 24.8,
+      "ttm_rev": 146767.0,
+      "ttm_pat": 24108.0,
+      "latest_eps": 14.79
+    },
+    {
+      "quarter": "2023-06-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6329,
+      "confidence": 0.418,
+      "price_at_signal": 1335.5,
+      "price_next_q": 1435.45,
+      "price_1y": 1566.75,
+      "return_1q": 0.0748,
+      "return_1y": 0.1732,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.767,
+        "management_quality": 0.67,
+        "valuation": 0.625,
+        "momentum": 0.4,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "3m_negative",
+        "pat_weakening"
+      ],
+      "pe_at_signal": 22.5,
+      "ttm_rev": 150230.0,
+      "ttm_pat": 24691.0,
+      "latest_eps": 14.37
+    },
+    {
+      "quarter": "2023-09-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6535,
+      "confidence": 0.431,
+      "price_at_signal": 1435.45,
+      "price_next_q": 1542.9,
+      "price_1y": 1875.6,
+      "return_1q": 0.0749,
+      "return_1y": 0.3066,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.736,
+        "management_quality": 0.67,
+        "valuation": 0.61,
+        "momentum": 0.575,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "pat_weakening",
+        "receivables_rising"
+      ],
+      "pe_at_signal": 24.0,
+      "ttm_rev": 152686.0,
+      "ttm_pat": 24880.0,
+      "latest_eps": 15.01
+    },
+    {
+      "quarter": "2023-12-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6856,
+      "confidence": 0.453,
+      "price_at_signal": 1542.9,
+      "price_next_q": 1498.05,
+      "price_1y": 1880.0,
+      "return_1q": -0.0291,
+      "return_1y": 0.2185,
+      "correct_1q": "neutral",
+      "components": {
+        "earnings_quality": 0.769,
+        "management_quality": 0.67,
+        "valuation": 0.588,
+        "momentum": 0.705,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "pat_weakening"
+      ],
+      "pe_at_signal": 26.2,
+      "ttm_rev": 153189.0,
+      "ttm_pat": 24407.0,
+      "latest_eps": 14.76
+    },
+    {
+      "quarter": "2024-03-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6477,
+      "confidence": 0.427,
+      "price_at_signal": 1498.05,
+      "price_next_q": 1566.75,
+      "price_1y": null,
+      "return_1q": 0.0459,
+      "return_1y": null,
+      "correct_1q": "neutral",
+      "components": {
+        "earnings_quality": 0.757,
+        "management_quality": 0.67,
+        "valuation": 0.614,
+        "momentum": 0.505,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "3m_negative",
+        "revenue_decline"
+      ],
+      "pe_at_signal": 23.6,
+      "ttm_rev": 153671.0,
+      "ttm_pat": 26248.0,
+      "latest_eps": 19.25
+    },
+    {
+      "quarter": "2024-06-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6656,
+      "confidence": 0.439,
+      "price_at_signal": 1566.75,
+      "price_next_q": 1875.6,
+      "price_1y": null,
+      "return_1q": 0.1971,
+      "return_1y": null,
+      "correct_1q": "correct",
+      "components": {
+        "earnings_quality": 0.75,
+        "management_quality": 0.67,
+        "valuation": 0.607,
+        "momentum": 0.615,
+        "thesis_alignment": 0.555
+      },
+      "flags": [
+        "pat_weakening"
+      ],
+      "pe_at_signal": 24.3,
+      "ttm_rev": 155053.0,
+      "ttm_pat": 26677.0,
+      "latest_eps": 15.38
+    },
+    {
+      "quarter": "2024-09-30",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.6995,
+      "confidence": 0.462,
+      "price_at_signal": 1875.6,
+      "price_next_q": 1880.0,
+      "price_1y": null,
+      "return_1q": 0.0023,
+      "return_1y": null,
+      "correct_1q": "neutral",
+      "components": {
+        "earnings_quality": 0.788,
+        "management_quality": 0.67,
+        "valuation": 0.562,
+        "momentum": 0.775,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 28.8,
+      "ttm_rev": 157045.0,
+      "ttm_pat": 26978.0,
+      "latest_eps": 15.71
+    },
+    {
+      "quarter": "2024-12-31",
+      "n_q_available": 4,
+      "signal": "BUY",
+      "composite_score": 0.7084,
+      "confidence": 0.468,
+      "price_at_signal": 1880.0,
+      "price_next_q": null,
+      "price_1y": null,
+      "return_1q": null,
+      "return_1y": null,
+      "correct_1q": "pending",
+      "components": {
+        "earnings_quality": 0.849,
+        "management_quality": 0.67,
+        "valuation": 0.568,
+        "momentum": 0.705,
+        "thesis_alignment": 0.555
+      },
+      "flags": [],
+      "pe_at_signal": 28.2,
+      "ttm_rev": 159988.0,
+      "ttm_pat": 27687.0,
+      "latest_eps": 16.43
+    }
+  ],
+  "stats": {
+    "total_periods": 25,
+    "correct": 13,
+    "wrong": 4,
+    "neutral": 8,
+    "accuracy": 0.52,
+    "avg_return_all": 4.62,
+    "avg_return_buy": 5.76,
+    "avg_return_hold": 2.18,
+    "avg_return_sell": null,
+    "by_signal": {
+      "HOLD": {
+        "total": 8,
+        "correct": 4,
+        "wrong": 0,
+        "neutral": 4
+      },
+      "BUY": {
+        "total": 17,
+        "correct": 9,
+        "wrong": 4,
+        "neutral": 4
+      }
+    },
+    "avg_return_by_signal": {
+      "HOLD": 2.18,
+      "BUY": 5.76
+    },
+    "scorer_attribution": {
+      "earnings_quality": 1.177,
+      "management_quality": 0.68,
+      "momentum": 0.36,
+      "valuation": 0.102
+    }
+  }
+}
