@@ -1,0 +1,19 @@
+{
+  "_version": 1,
+  "_note": "Weights sum to 1.0. Updated via feedback loop — Claude proposes, human approves.",
+  "weights": {
+    "earnings_quality": 0.30,
+    "management_quality": 0.25,
+    "valuation": 0.20,
+    "momentum": 0.10,
+    "thesis_alignment": 0.15
+  },
+  "score_thresholds": {
+    "strong_buy": 0.75,
+    "buy": 0.60,
+    "hold": 0.45,
+    "sell": 0.30,
+    "strong_sell": 0.0
+  },
+  "feedback_history": []
+}
